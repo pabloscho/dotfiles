@@ -10,6 +10,10 @@ fi
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+CASE_SENSITIVE="true"
+ENABLE_CORRECTION="true"
+
+plugins=(git)
 
 # ZSH plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -34,6 +38,11 @@ export optflags="-Wno-error=implicit-function-declaration"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include:$CPPFLAGS"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
 
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Terminal Alias
 alias l='ls -lah'
 alias lc='colorls -lA --sd'
@@ -50,7 +59,5 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias gco='git checkout'
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# Github Copilot
+alias ghcs='gh copilot suggest'
