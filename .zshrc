@@ -43,6 +43,14 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Python
+alias py=python3
+
 # Terminal Alias
 alias l='ls -lah'
 alias lc='colorls -lA --sd'
@@ -50,6 +58,8 @@ alias lc='colorls -lA --sd'
 # Directory Alias
 alias cdd='cd ~/Desktop'
 alias cdh='cd ~'
+
+alias cls='clear'
 
 # Git Alias
 alias gs='git status'
