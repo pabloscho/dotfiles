@@ -51,17 +51,14 @@ export NVM_DIR="$HOME/.nvm"
 # Python
 alias py=python3
 
-# Terminal Alias
-alias l='ls -lah'
-alias lc='colorls -lA --sd'
-
-# Directory Alias
+# List / Directory
 alias cdd='cd ~/Desktop'
 alias cdh='cd ~'
-
+alias l='ls -lah'
+alias lc='colorls -lA --sd'
 alias cls='clear'
 
-# Git Alias
+# Git
 alias gs='git status'
 alias gl='git log'
 alias gd='git diff'
